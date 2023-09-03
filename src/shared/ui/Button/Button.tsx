@@ -8,6 +8,7 @@ export enum ThemeButton {
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
+    // eslint-disable-next-line react/require-default-props
     theme?: ThemeButton;
 }
 
@@ -27,6 +28,10 @@ export const Button: FC<ButtonProps> = (props) => {
             {children}
         </button>
     );
+};
+
+Button.defaultProps = {
+    className: '',
 };
 
 export default Button;

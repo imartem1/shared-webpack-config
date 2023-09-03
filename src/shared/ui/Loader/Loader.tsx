@@ -5,11 +5,17 @@ interface LoaderProps {
     className?: string;
 }
 
-export default ({ className }: LoaderProps) => (
-    <div className={classNames('lds-ring', {}, [className])}>
+const Loader = ({ className }: LoaderProps) => (
+    <div className={classNames('', {}, [className])}>
         <div />
         <div />
         <div />
         <div />
     </div>
 );
+
+Loader.defaultProps = {
+    className: 'lds-ring',
+};
+
+export default Loader;

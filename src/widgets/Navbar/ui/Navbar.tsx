@@ -24,4 +24,8 @@ const Navbar = ({ className }: NavbarProps) => {
     );
 };
 
+Navbar.defaultProps = {
+    className: '',
+};
+
 export default Navbar;

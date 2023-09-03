@@ -31,3 +31,8 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         </Link>
     );
 };
+
+AppLink.defaultProps = {
+    className: '',
+    theme: AppLinkTheme.PRIMARY,
+};

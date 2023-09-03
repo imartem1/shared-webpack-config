@@ -35,7 +35,7 @@ module.exports = {
             { destructuredArrayIgnorePattern: '^_' },
         ],
         'no-unused-vars': 'off',
-        'react/require-default-props': 'off',
+        'react/require-default-props': 'warn',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
