@@ -3,9 +3,9 @@ import { BuildOptions } from './types/config';
 import { buildPlugins } from './buildPlugins';
 import { buildResolvers } from './buildResolvers';
 import { buildLoaders } from './buildLoaders';
-import { buildDevServer } from './buildDevServer';
+import buildDevServer from './buildDevServer';
 
-export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
+export default function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
     const { paths, mode, isDev } = options;
     return {
         mode,
