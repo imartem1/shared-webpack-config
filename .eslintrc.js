@@ -28,7 +28,10 @@ module.exports = {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            'error',
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'error',
         '@typescript-eslint/no-unused-vars': [
@@ -42,10 +45,19 @@ module.exports = {
         }],
         'react/function-component-definition':
         [
-            2,
+            'error',
             {
                 namedComponents: 'arrow-function',
                 unnamedComponents: 'arrow-function',
+            },
+        ],
+        '@typescript-eslint/no-shadow': [
+            'error',
+            {
+                builtinGlobals: true,
+                hoist: 'functions',
+                allow: [],
+                ignoreOnInitialization: false,
             },
         ],
         'no-shadow': 'off',
