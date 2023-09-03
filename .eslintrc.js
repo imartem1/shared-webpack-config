@@ -9,6 +9,7 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
         'plugin:@typescript-eslint/recommended',
+        'plugin:react/jsx-runtime',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -36,7 +37,6 @@ module.exports = {
         ],
         'no-unused-vars': 'off',
         'react/require-default-props': 'warn',
-        'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
