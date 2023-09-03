@@ -75,7 +75,7 @@ module.exports = {
             }
         ],
         'import/no-extraneous-dependencies': ['error', { 'devDependencies' : true}],
-        'no-underscore-dangle': 'off',
+        'no-underscore-dangle': ['error', { 'allow': ['__IS_DEV__'] }],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', { ignoreComments: true, code: 90 }],
     },
