@@ -8,10 +8,10 @@ interface NavbarProps {
 }
 
 const Navbar = ({ className }: NavbarProps) => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
-        <div className={classNames(cls.Navbar, {}, [])}>
+        <div className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.links}>
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>
                     {t('Главная')}

@@ -6,7 +6,7 @@ interface LoaderProps {
 }
 
 export default ({ className }: LoaderProps) => (
-    <div className={classNames('lds-ring')}>
+    <div className={classNames('lds-ring', {}, [className])}>
         <div />
         <div />
         <div />
