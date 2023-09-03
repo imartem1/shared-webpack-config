@@ -2,19 +2,26 @@
     "mySnippet": {
       "prefix": "rc",
       "body": [
-        "import { classNames } from 'shared/lib/classNames/classNames';",
+        "import classNames from 'shared/lib/classNames/classNames';",
         "import cls from './${TM_FILENAME_BASE}.module.scss';",
         "",
         "interface ${TM_FILENAME_BASE}Props {",
         "    className?: string;",
         "}",
         "",
-        "export const ${TM_FILENAME_BASE} = ({ className }: ${TM_FILENAME_BASE}Props) => {",
+        "const ${TM_FILENAME_BASE} = ({ className }: ${TM_FILENAME_BASE}Props) => {",
         "    return (",
         "        <div className={classNames(cls.${TM_FILENAME_BASE}, {}, [className])}>",
         "        </div>",
         "    );",
-        "};"
+        "};",
+        "",
+        "PageLoader.defaultProps = {",
+        "    className: '',",
+        "};",
+        "",
+        "export default ${TM_FILENAME_BASE};",
+        ""
       ],
       "description": "create react component",
       "scope": "javascriptreact, typescriptreact"

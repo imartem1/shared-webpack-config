@@ -4,11 +4,11 @@ import cls from './Button.module.scss';
 
 export enum ThemeButton {
     CLEAR = 'clear',
+    DEFAULT = '',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    // eslint-disable-next-line react/require-default-props
     theme?: ThemeButton;
 }
 
@@ -32,6 +32,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
 Button.defaultProps = {
     className: '',
+    theme: ThemeButton.DEFAULT,
 };
 
 export default Button;
