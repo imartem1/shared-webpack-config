@@ -52,11 +52,11 @@ module.exports = {
             },
         ],
         '@typescript-eslint/no-shadow': [
-            'error',
+            'warn',
             {
                 builtinGlobals: true,
                 hoist: 'functions',
-                allow: [],
+                allow: ['classNames'],
                 ignoreOnInitialization: false,
             },
         ],
@@ -66,8 +66,5 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', { ignoreComments: true, code: 90 }],
-    },
-    globals: {
-        __IS_DEV__: true,
     },
 };
