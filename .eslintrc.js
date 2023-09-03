@@ -40,7 +40,13 @@ module.exports = {
         'react/jsx-props-no-spreading': ['warn', {
             exceptions: ['button', 'Link'],
         }],
-        'react/function-component-definition': 'off',
+        'react/function-component-definition':
+            [
+                2,
+                {
+                    namedComponents: 'arrow-function',
+                    unnamedComponents: 'arrow-function',
+                }],
         'no-shadow': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
