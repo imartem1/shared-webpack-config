@@ -37,7 +37,9 @@ module.exports = {
         ],
         'no-unused-vars': 'off',
         'react/require-default-props': 'warn',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': ['warn', {
+            exceptions: ['button', 'Link'],
+        }],
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
