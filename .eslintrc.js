@@ -7,6 +7,7 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'airbnb',
+        'airbnb-typescript',
         'plugin:i18next/recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:react/jsx-runtime',
@@ -18,6 +19,7 @@ module.exports = {
         },
         ecmaVersion: 'latest',
         sourceType: 'module',
+        project: './tsconfig.json',
     },
     plugins: [
         'react',
@@ -27,7 +29,8 @@ module.exports = {
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
+        "indent": "off",
+        "@typescript-eslint/indent": [2, 4],
         'react/jsx-filename-extension': [
             'error',
             { extensions: ['.js', '.jsx', '.tsx'] },
@@ -61,7 +64,16 @@ module.exports = {
             },
         ],
         'no-shadow': 'off',
-        'import/extensions': 'off',
+        'import/extensions': [
+            'error',
+            'ignorePackages',
+            {
+              js: 'never',
+              jsx: 'never',
+              ts: 'never',
+              tsx: 'never',
+            }
+        ],
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
