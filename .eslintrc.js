@@ -74,7 +74,7 @@ module.exports = {
               tsx: 'never',
             }
         ],
-        'import/no-extraneous-dependencies': 'off',
+        'import/no-extraneous-dependencies': ['error', { 'devDependencies' : true}],
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', { ignoreComments: true, code: 90 }],
