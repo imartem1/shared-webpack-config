@@ -1,8 +1,8 @@
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BuildOptions } from './types/config';
 // import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { BuildOptions } from './types/config';
 
 export default function buildPlugins(
     { paths, isDev }: BuildOptions,
@@ -22,7 +22,7 @@ export default function buildPlugins(
         new webpack.HotModuleReplacementPlugin(),
         // // Плагин для теста бандла
         // new BundleAnalyzerPlugin({
-        //     openAnalyzer: false,
+        //     openAnalyzer: true,
         // }),
     ];
 }
