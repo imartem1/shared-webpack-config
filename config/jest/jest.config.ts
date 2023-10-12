@@ -29,6 +29,9 @@ export default {
     moduleDirectories: [
         'node_modules',
     ],
+    modulePaths: [
+        '<rootDir>src',
+    ],
 
     // The root directory that Jest should scan for tests and modules within
     rootDir: '../../',
@@ -113,6 +116,7 @@ export default {
 
     // A preset that is used as a base for Jest's configuration
     // preset: undefined,
+    
 
     // Run tests from one or more projects
     // projects: undefined,
@@ -184,14 +188,13 @@ export default {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: undefined,
+    // transform: undefiend,
 
     // An array of regexp pattern strings that are matched against all source file paths, matched
     // files will skip transformation
-    // transformIgnorePatterns: [
-    //   "/node_modules/",
-    //   "\\.pnp\\.[^\\/]+$"
-    // ],
+    transformIgnorePatterns: [
+        'node_modules/(?!variables/.*)',
+    ],
 
     // An array of regexp pattern strings that are matched against all modules before the module
     // loader will automatically return a mock for them
