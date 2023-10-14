@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-import path from "path";
+import path from 'path';
 
 export default {
     // All imported modules in your tests should be mocked automatically
@@ -108,7 +108,7 @@ export default {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-      },
+    },
 
     // An array of regexp pattern strings, matched against all module paths before considered
     // 'visible' to the module loader
@@ -122,7 +122,6 @@ export default {
 
     // A preset that is used as a base for Jest's configuration
     // preset: undefined,
-    
 
     // Run tests from one or more projects
     // projects: undefined,
