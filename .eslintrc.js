@@ -76,7 +76,20 @@ module.exports = {
         ],
         'import/no-extraneous-dependencies': ['error', { 'devDependencies' : true}],
         'no-underscore-dangle': ['error', { 'allow': ['__IS_DEV__'] }],
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': ['error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid'],
+            },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 90 }],
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
