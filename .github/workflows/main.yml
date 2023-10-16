@@ -16,10 +16,8 @@ jobs:
         uses: actions/setup-node@v1
         with: 
           node-version: ${{ matrix.node-version }}
-      - name: install loki
-        run: npm ci loki --force
       - name: install modules
-        run: npm ci
+        run: npm ci --force
       - name: build production project
         run: npm run build:prod
       - name: linting typescript
