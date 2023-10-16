@@ -1,6 +1,6 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export function buildCssLoaders(isDev: boolean) {
+export default function buildCssLoaders(isDev: boolean) {
     return {
         test: /\.s[ac]ss$/i,
         use: [
@@ -21,5 +21,5 @@ export function buildCssLoaders(isDev: boolean) {
             // Compiles Sass to CSS
             'sass-loader',
         ],
-    }
+    };
 }
