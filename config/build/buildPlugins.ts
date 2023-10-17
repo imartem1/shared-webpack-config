@@ -5,9 +5,12 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
 export default function buildPlugins(
-    { paths, isDev }: BuildOptions,
+    {
+        paths,
+        isDev,
+    }: BuildOptions,
 ): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
         new HTMLWebpackPlugin({
             template: paths.html,
         }),
@@ -19,10 +22,14 @@ export default function buildPlugins(
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        // // Плагин для теста бандла
-        // new BundleAnalyzerPlugin({
-        //     openAnalyzer: true,
-        // }),
     ];
+
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        // plugins.push(new BundleAnalyzerPlugin({
+        //     openAnalyzer: false,
+        // }));
+    }
+
+    return plugins;
 }
