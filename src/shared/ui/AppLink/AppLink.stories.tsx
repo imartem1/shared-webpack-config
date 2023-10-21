@@ -11,7 +11,7 @@ const meta = {
         layout: 'centered',
     },
     args: {
-        to: '/'
+        to: '/',
     },
     tags: ['autodocs'],
 } satisfies Meta<typeof AppLink>;
@@ -22,14 +22,14 @@ type Story = StoryObj<typeof meta>;
 export const LightPrimary: Story = {
     args: {
         children: 'Text',
-        theme: AppLinkTheme.PRIMARY
+        theme: AppLinkTheme.PRIMARY,
     },
 };
 
 export const DarkPrimary: Story = {
     args: {
         children: 'Text',
-        theme: AppLinkTheme.PRIMARY
+        theme: AppLinkTheme.PRIMARY,
     },
     decorators: [
         (Story) => (
@@ -37,20 +37,20 @@ export const DarkPrimary: Story = {
                 <Story />
             </ThemeDecorator>
         ),
-    ]
+    ],
 };
 
 export const LightSecondary: Story = {
     args: {
         children: 'Text',
-        theme: AppLinkTheme.SECONDARY
+        theme: AppLinkTheme.SECONDARY,
     },
 };
 
 export const DarkSecondary: Story = {
     args: {
         children: 'Text',
-        theme: AppLinkTheme.SECONDARY
+        theme: AppLinkTheme.SECONDARY,
     },
     decorators: [
         (Story) => (
@@ -58,5 +58,5 @@ export const DarkSecondary: Story = {
                 <Story />
             </ThemeDecorator>
         ),
-    ]
+    ],
 };

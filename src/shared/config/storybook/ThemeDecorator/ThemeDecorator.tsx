@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { Theme } from "app/providers/ThemeProvider";
+import React, { FC } from 'react';
+import { Theme } from 'app/providers/ThemeProvider';
 
 interface Props {
     children?: React.ReactNode;
