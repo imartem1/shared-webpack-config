@@ -84,6 +84,7 @@ const Modal = (props: ModalProps) => {
 Modal.defaultProps = {
     className: '',
     children: <div />,
+    isOpen: false,
 };
 
 export default Modal;
