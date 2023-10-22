@@ -35,17 +35,38 @@ export const PrimaryDark: Story = {
     ],
 };
 
-export const Secondary: Story = {
+export const Clear: Story = {
     args: {
         children: 'Text',
         theme: ThemeButton.CLEAR,
     },
 };
 
-export const SecondaryDark: Story = {
+export const ClearDark: Story = {
     args: {
         children: 'Text',
         theme: ThemeButton.CLEAR,
+    },
+    decorators: [
+        (Story) => (
+            <ThemeDecorator theme={Theme.DARK}>
+                <Story />
+            </ThemeDecorator>
+        ),
+    ],
+};
+
+export const ClearInverted: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.CLEAR_INVERTED,
+    },
+};
+
+export const ClearInvertedDark: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.CLEAR_INVERTED,
     },
     decorators: [
         (Story) => (
