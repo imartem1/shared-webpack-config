@@ -6,7 +6,6 @@ const MainPage = () => {
     return (
         <div>
             {t('Main page')}
-            <Counter />
         </div>
     );
 };
