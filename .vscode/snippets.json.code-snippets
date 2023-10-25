@@ -1,5 +1,5 @@
 {
-    "mySnippet": {
+    "reactComponent": {
       "prefix": "rc",
       "body": [
         "import classNames from 'shared/lib/classNames/classNames';",
@@ -29,5 +29,20 @@
       ],
       "description": "create react component",
       "scope": "javascriptreact, typescriptreact"
+    },
+    "testComponent": {
+      "prefix": "tc",
+      "body": [
+        "import testComponent from './${TM_FILENAME_BASE}';",
+        "",
+        "describe('', () => {",
+        "    test('', () => {",
+        "        expect().toEqual();",
+        "    });",
+        "});",
+        ""
+      ],
+      "description": "create react tes component",
+      "scope": "javascriptreact, typescriptreact, typescript"
     }
   }
