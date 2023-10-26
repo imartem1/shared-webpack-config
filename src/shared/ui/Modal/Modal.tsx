@@ -61,12 +61,11 @@ const Modal = (props: ModalProps) => {
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
-        [cls[theme]]: true,
     };
 
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className])}>
+            <div className={classNames(cls.Modal, mods, [className, theme])}>
                 <div className={cls.overlay} role="presentation" onClick={closeHandler}>
                     <div
                         role="presentation"
