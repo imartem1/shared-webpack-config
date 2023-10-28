@@ -1,9 +1,14 @@
 {
-    "Test example": "Test example",
-    "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
-    "Language": "English",
-    "theme": "Theme",
-    "Switcher": "Switcher",
-    "Short language": "En",
-    "Sign in": "Sign in"
+  "Test example": "Test example",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Language": "English",
+  "theme": "Theme",
+  "Switcher": "Switcher",
+  "Short language": "En",
+  "Sign in": "Sign in",
+  "Add login": "Add login",
+  "Add password": "Add password",
+  "Auth form": "Auth form",
+  "Wrong login or password": "Wrong login or password",
+  "Log out": "Log out"
 }

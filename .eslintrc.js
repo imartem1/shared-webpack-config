@@ -38,13 +38,13 @@ module.exports = {
             { extensions: ['.js', '.jsx', '.tsx'] },
         ],
         'import/no-unresolved': 'off',
-        'import/prefer-default-export': 'error',
+        'import/prefer-default-export': 'off',
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { destructuredArrayIgnorePattern: '^_' },
         ],
         'no-unused-vars': 'off',
-        'react/require-default-props': 'warn',
+        'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': ['warn', {
             exceptions: ['button', 'Link'],
         }],

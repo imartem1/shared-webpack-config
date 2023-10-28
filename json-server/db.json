@@ -19,11 +19,13 @@
       "id": 4,
       "title": "json-server",
       "author": "typicode"
-    },
+    }
+  ],
+  "users": [
     {
+      "id": 1,
       "username": "admin",
-      "password": "123",
-      "id": 5
+      "password": "123"
     }
   ],
   "comments": [
