@@ -3,6 +3,7 @@
       "prefix": "rc",
       "body": [
         "import classNames from 'shared/lib/classNames/classNames';",
+        "import { useTranslation } from 'react-i18next';",
         "import cls from './${TM_FILENAME_BASE}.module.scss';",
         "",
         "interface ${TM_FILENAME_BASE}Props {",
@@ -13,6 +14,8 @@
         "    const {",
         "        className,",
         "    } = props;",
+        "",
+        "    const { t } = useTranslation();",
         "",
         "    return (",
         "        <div className={classNames(cls.${TM_FILENAME_BASE}, {}, [className])}>",
