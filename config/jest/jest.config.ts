@@ -108,6 +108,8 @@ export default {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        // Надо бы поисследовать, react-redux похоже в нём проблема
+        'entities/(.*)': '<rootDir>/src/entities/$1',
     },
 
     // An array of regexp pattern strings, matched against all module paths before considered
