@@ -12,13 +12,13 @@ export interface StateSchema {
     loginForm?: LoginSchema;
 }
 
-export type StateSchenaKey = keyof StateSchema;
+export type StateSchemaKey = keyof StateSchema;
 
 export interface ReducerManager {
     getReducerMap: () => ReducersMapObject<StateSchema>;
     reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
-    add: (key: StateSchenaKey, reducer: Reducer) => void;
-    remove: (key: StateSchenaKey) => void;
+    add: (key: StateSchemaKey, reducer: Reducer) => void;
+    remove: (key: StateSchemaKey) => void;
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {

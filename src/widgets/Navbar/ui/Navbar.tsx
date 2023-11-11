@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import { useCallback, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
-import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
+import { useAppDispatch, useAppSelector } from 'app/hooks/redux';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -16,9 +16,9 @@ const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
 
-    const authData = useSelector(getUserAuthData);
+    const authData = useAppSelector(getUserAuthData);
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -53,10 +53,6 @@ const Navbar = ({ className }: NavbarProps) => {
                     >
                         {t('Log out')}
                     </Button>
-                    {
-                        isAuthModal
-                        && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-                    }
                 </div>
             </div>
         );
@@ -72,7 +68,12 @@ const Navbar = ({ className }: NavbarProps) => {
                 >
                     {t('Sign in')}
                 </Button>
-                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+                {isAuthModal && (
+                    <LoginModal
+                        isOpen={isAuthModal}
+                        onClose={onCloseModal}
+                    />
+                )}
             </div>
         </div>
     );

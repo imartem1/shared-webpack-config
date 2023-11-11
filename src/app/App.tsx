@@ -3,14 +3,14 @@ import classNames from 'shared/lib/classNames/classNames';
 import Navbar from 'widgets/Navbar';
 import Sidebar from 'widgets/Sidebar';
 import { Suspense, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
 import AppRouter from './providers/router';
+import { useAppDispatch } from './hooks/redux';
 
 const APP = () => {
     const { theme } = useTheme();
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
         dispatch(userActions.initAuthData());
