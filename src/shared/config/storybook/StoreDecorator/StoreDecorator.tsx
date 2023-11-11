@@ -6,7 +6,7 @@ import { loginReducer } from 'features/AuthByUsername';
 interface Props {
     children?: React.ReactNode;
     initialState?: DeepPartial<StateSchema>
-    asyncReducers: DeepPartial<ReducersMapObject<StateSchema>>
+    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
 }
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
