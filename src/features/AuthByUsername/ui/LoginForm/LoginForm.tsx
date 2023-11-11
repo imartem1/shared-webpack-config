@@ -2,7 +2,7 @@ import classNames from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import Button, { ThemeButton } from 'shared/ui/Button/Button';
 import Input from 'shared/ui/Input/Input';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import Text, { TextTheme } from 'shared/ui/Text/Text';
 import { useAppDispatch, useAppSelector } from 'app/hooks/redux';
 import DynemicModuleLoader, { ReducersList } from
