@@ -34,7 +34,7 @@
       "body": [
         "import testComponent from './${TM_FILENAME_BASE}';",
         "",
-        "describe('', () => {",
+        "describe('${TM_FILENAME_BASE}', () => {",
         "    test('', () => {",
         "        expect().toEqual();",
         "    });",
